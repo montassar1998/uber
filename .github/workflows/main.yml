@@ -27,7 +27,7 @@ jobs:
         run: terraform fmt
 
       - name: Terraform Plan
-        run: terraform plan -var="environment=development" -var="elasticsearch_password=${{ secrets.ELASTICSEARCH_PASSWORD }}"
+        run: terraform plan 
 
       - name: Terraform Apply
-        run: terraform apply -var="environment=development" -var="elasticsearch_password=${{ secrets.ELASTICSEARCH_PASSWORD }}" -auto-approve
+        run: terraform apply  --auto-approve
